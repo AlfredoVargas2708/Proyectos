@@ -1,6 +1,7 @@
 .app{
-    display: flex;
+    display: grid;
     justify-content: center;
+    text-align: center;
     }
     @media screen and (max-width: 700px) {
         .app{
@@ -8,6 +9,40 @@
         }
     }
 
-.title strong{
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+strong{
     color: purple;
+    font-weight: bold;
+}
+
+.form{
+    text-align: left;
+    border: 1px solid #ddd;
+    width: 40vh;
+    box-shadow: 0px 0px 5px 8px #ddd;
+}
+
+.form button{
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background-color: purple;
+    color: white;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+form{
+    padding: 10px;
+}
+
+input{
+    width: 100%;
+    border: none;
+    padding-left: 5px;
 }
