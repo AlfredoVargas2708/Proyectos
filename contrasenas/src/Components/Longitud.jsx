@@ -14,7 +14,7 @@ const Longitud = ({ longitudClave }) => {
     };
 
     return (
-        <div className='longitud'>
+        <>
             <p>LONGITUD: {longitud}</p>
             <div className='rango'>
                 <p>{min}</p>
@@ -27,7 +27,7 @@ const Longitud = ({ longitudClave }) => {
                 />
                 <p>{max}</p>
             </div>
-        </div>
+        </>
     );
 }
 

@@ -10,7 +10,7 @@ function Contrasena({ crear }) {
     };
 
     return (
-        <div className='contrasena'>
+        <div>
             Generador de contraseñas
             <div className='texto'>
                 <p>{crear}</p>

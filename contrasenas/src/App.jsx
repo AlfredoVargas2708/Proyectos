@@ -76,8 +76,10 @@ function App() {
       <div className='generador'>
         <Contrasena
           crear={clave} />
-        <Longitud
-          longitudClave={longitudClave} />
+        <div className='longitud'>
+          <Longitud
+            longitudClave={longitudClave} />
+        </div>
         <Config
           confirmarMinuscula={confirmarMinuscula}
           confirmarMayuscula={confirmarMayuscula}
