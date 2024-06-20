@@ -1,13 +1,13 @@
 import './App.css'
 import Form from './Componentes/Form'
-import List from './Componentes/List'
 import React, {useState } from 'react'
+import List from './Componentes/List'
 
 function App() {
   const [paciente, setPaciente] = useState([{
-    id: '',
+    id: 0,
     nombre: '',
-    propietario: '',
+    apellido: '',
     email: '',
     fecha: '',
     sintomas: ''
@@ -18,8 +18,10 @@ function App() {
         <h1>Seguimiento de Pacientes <strong>Veterinaria</strong></h1>
       </div>
       <div className='container'>
-        <Form />
-        <List paciente={paciente}/>
+        <Form
+        setPaciente={setPaciente}/>
+        <List
+        paciente={paciente}/>
       </div>
     </div>
   )
