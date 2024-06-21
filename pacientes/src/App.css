@@ -52,4 +52,33 @@ input{
     border: 1px solid #ddd;
     width: 40vh;
     box-shadow: 0px 0px 5px 8px #ddd;
+    margin-left: 30px;
+    padding: 20px;
+}
+
+.paciente{
+    width: 100%;
+}
+
+.botones{
+    display: flex;
+    justify-content: space-between;
+}
+
+#editar{
+    background-color: purple;
+    color: white;
+    font-size: 20px;
+    width: 15vh;
+    height: 5vh;
+    border-radius: 10px;
+}
+
+#eliminar {
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    width: 15vh;
+    height: 5vh;
+    border-radius: 10px;
 }
