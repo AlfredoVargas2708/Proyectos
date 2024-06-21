@@ -1,6 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Modal from 'react-modal';
 
 const List = ({ pacientes }) => {
+    const [modalIsOpen, setIsOpen] = React.useState(false);
+    const [selectedPaciente, setSelectedPaciente] = useState([])
+
+    function openModal(paciente) {
+        setSelectedPaciente(paciente)
+        setIsOpen(true);
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
+
     return (
         <div>
             <div>
@@ -15,11 +28,48 @@ const List = ({ pacientes }) => {
                     <p><b>FECHA:</b> {paciente.fecha}</p>
                     <p><b>SÍNTOMAS:</b> {paciente.sintomas}</p>
                     <div className='botones'>
-                        <button id='editar'>EDITAR</button>
+                        <button id='editar' onClick={() => openModal(paciente)}>EDITAR</button>
                         <button id='eliminar'>ELIMINAR</button>
                     </div>
                 </div>
             ))}
+            <Modal
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+                className='modal'
+            >
+                <h2>EDITAR PACIENTE</h2>
+                <div className='inputs'>
+                    <form>
+                        <p>NOMBRE:</p>
+                        <input
+                            type='text'
+                            value={selectedPaciente.nombre}
+                        />
+                        <p>APELLIDO:</p>
+                        <input
+                            type='text'
+                            value={selectedPaciente.apellido}
+                        />
+                        <p>EMAIL:</p>
+                        <input
+                            type='text'
+                            value={selectedPaciente.email}
+                        />
+                        <p>FECHA ALTA:</p>
+                        <input
+                            type='date'
+                            value={selectedPaciente.fecha}
+                        />
+                        <p>SÍNTOMAS:</p>
+                        <input
+                            type='text'
+                            value={selectedPaciente.sintomas}
+                        />
+                    </form>
+                </div>
+                <button onClick={closeModal}>close</button>
+            </Modal>
         </div>
     );
 };
