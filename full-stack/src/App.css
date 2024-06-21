@@ -4,10 +4,12 @@
 
 input{
     width: 100%;
+    margin-bottom: 11px;
 }
 
 select{
     width: 100%;
+    margin-top: 11px;
 }
 
 .contenido{
@@ -48,10 +50,23 @@ select{
 .select{
     display: flex;
     justify-content: space-around;
-    margin-bottom: 10px;
 }
 
 .select span{
     margin-top: 11px;
+}
+
+.boton-actualizar{
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-weight: bolder;
+    height: 40px;
+    font-size: 15px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 

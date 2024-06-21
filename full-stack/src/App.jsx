@@ -1,7 +1,9 @@
 import './App.css'
 import Form from './Componentes/Form'
+import React, { useState } from 'react'
 
 function App() {
+  const [empleados, setEmpleados] = useState([])
   return (
     <div>
       <div className='titulo'>
@@ -13,7 +15,7 @@ function App() {
           <div className='subtitulos'>
             <h4>Agregar Nuevo Empleado</h4>
           </div>
-          <Form />
+          <Form/>
         </div>
         <div className='lista'>
           <div>
