@@ -13,7 +13,9 @@ function App() {
       </div>
       <div className='container'>
         <Form setPacientes={setPacientes} />
-        <List pacientes={pacientes} />
+        <List pacientes={pacientes}
+          setPacientes={setPacientes}
+        />
       </div>
     </div>
   );

@@ -85,15 +85,55 @@ input {
 }
 
 .modal ::content {
-    top: '50%';
-    left: '50%';
+    top: '0%';
+    left: '0%';
     right: 'auto';
     bottom: 'auto';
     margin-right: '-50%';
     transform: 'translate(-50%, -50%)',
 }
 
-.modal h2{
+.modal h2 {
     text-align: center;
     color: purple;
+}
+
+.modal {
+    width: 100%;
+}
+
+.form-edicion {
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+}
+
+.form-edicion p {
+    text-align: left;
+    color: purple;
+    font-weight: bold;
+}
+
+.form-edicion input {
+    text-align: center;
+    margin-top: 10px;
+    width: 90%;
+}
+
+.guardar {
+    background-color: purple;
+    color: white;
+    font-size: 20px;
+    width: 15vh;
+    height: 5vh;
+    border-radius: 10px;
+}
+
+.cancelar {
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    width: 15vh;
+    height: 5vh;
+    border-radius: 10px;
 }
