@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Form = ({ setPacientes }) => {
     const [nombre, setNombre] = useState('');
-    const [apellido, setApellido] = useState('');
+    const [propietario, setPropetario] = useState('');
     const [email, setEmail] = useState('');
     const [fecha, setFecha] = useState('');
     const [sintomas, setSintomas] = useState('');
@@ -14,7 +14,7 @@ const Form = ({ setPacientes }) => {
             ...prevState,
             {
                 nombre: nombre,
-                apellido: apellido,
+                propietario: propietario,
                 email: email,
                 fecha: fecha,
                 sintomas: sintomas
@@ -24,7 +24,7 @@ const Form = ({ setPacientes }) => {
             autoClose: 1000
         });
         setNombre('');
-        setApellido('');
+        setPropetario('');
         setEmail('');
         setFecha('');
         setSintomas('');
@@ -45,12 +45,12 @@ const Form = ({ setPacientes }) => {
                         placeholder='Nombre del Paciente'
                         value={nombre}
                     />
-                    <h6>APELLIDO</h6>
+                    <h6>PROPIETARIO</h6>
                     <input
-                        onChange={e => setApellido(e.target.value)}
+                        onChange={e => setPropetario(e.target.value)}
                         type='text'
-                        placeholder='Apellido del Paciente'
-                        value={apellido}
+                        placeholder='Nombre del Propietario'
+                        value={propietario}
                     />
                     <h6>EMAIL</h6>
                     <input

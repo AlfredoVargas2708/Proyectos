@@ -39,7 +39,7 @@ const List = ({ pacientes, setPacientes}) => {
             {pacientes.map((paciente, index) => (
                 <div key={index} className='lista'>
                     <p><b>NOMBRE:</b> {paciente.nombre}</p>
-                    <p><b>APELLIDO:</b> {paciente.apellido}</p>
+                    <p><b>PROPIETARIO:</b> {paciente.propietario}</p>
                     <p><b>EMAIL:</b> {paciente.email}</p>
                     <p><b>FECHA:</b> {paciente.fecha}</p>
                     <p><b>SÍNTOMAS:</b> {paciente.sintomas}</p>
@@ -57,8 +57,8 @@ const List = ({ pacientes, setPacientes}) => {
                         <input type="text" name="nombre" value={currentPaciente.nombre} onChange={handleChange} />
                     </p>
                     <p>
-                        APELLIDO:
-                        <input type="text" name="apellido" value={currentPaciente.apellido} onChange={handleChange} />
+                        PROPIETARIO:
+                        <input type="text" name="propietario" value={currentPaciente.propietario} onChange={handleChange} />
                     </p>
                     <p>
                         EMAIL:
