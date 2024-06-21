@@ -1,4 +1,5 @@
 import './App.css'
+import Form from './Componentes/Form'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <div className='subtitulos'>
             <h4>Agregar Nuevo Empleado</h4>
           </div>
+          <Form />
         </div>
         <div className='lista'>
           <div>
