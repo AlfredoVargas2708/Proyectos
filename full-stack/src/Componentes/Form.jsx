@@ -5,7 +5,7 @@ const Form = () => {
     const [isSelectedFem, setIsSelectedFem] = useState(false)
     const [nombre, setNombre] = useState('')
     const [cedula, setCedula] = useState('')
-    const [edad, setEdad] = useState([])
+    const [edad, setEdad] = useState('')
     const [sexo, setSexo] = useState('')
     const [telefono, setTelefono] = useState('')
     const [cargo, setCargo] = useState('')
