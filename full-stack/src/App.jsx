@@ -15,7 +15,7 @@ function App() {
           <div className='subtitulos'>
             <h4>Agregar Nuevo Empleado</h4>
           </div>
-          <Form/>
+          <Form setEmpleados={setEmpleados}/>
         </div>
         <div className='lista'>
           <div>

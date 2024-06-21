@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const Form = () => {
+const Form = ({setEmpleados}) => {
     const [isSelectedMas, setIsSelectedMas] = useState(false)
     const [isSelectedFem, setIsSelectedFem] = useState(false)
     const [nombre, setNombre] = useState('')
@@ -11,6 +13,13 @@ const Form = () => {
     const [cargo, setCargo] = useState('')
     const [foto, setFoto] = useState('')
     const [edades, setEdades] = useState(Array.from({ length: 100 }, (_, i) => i + 1));
+    const cargos = [
+        'Desarrollador de FrontEnd',
+        'Desarrollador de BackEnd',
+        'Secretario',
+        'Conserje',
+        'Jefe de área'
+    ]
 
     const handleSelected = (e) => {
         if(e.target.className === 'noSeleccionado'){
@@ -37,7 +46,28 @@ const Form = () => {
     }
 
     const handleClick = () => {
-        console.log(edad)
+        setEmpleados(prevState => [
+            ...prevState,
+            {
+                nombre: nombre,
+                cedula: cedula,
+                edad: edad,
+                sexo: sexo,
+                telefono: telefono,
+                cargo: cargo,
+                foto: foto
+            }
+        ])
+        toast.success('Paciente agregado exitosamente', {
+            autoClose: 1000
+        });
+        setNombre('')
+        setCedula('')
+        setEdad('')
+        setSexo('')
+        setTelefono('')
+        setCargo('')
+        setFoto('')
     }
 
     return (
@@ -46,7 +76,7 @@ const Form = () => {
                 <p>Nombre</p>
                 <input type='text' value={nombre} onChange={(e) => setNombre(e.target.value)} />
                 <p>Cédula (RUT)</p>
-                <input type='number' value={cedula} onChange={(e) => setCedula(e.target.value)} />
+                <input type='text' value={cedula} onChange={(e) => setCedula(e.target.value)} />
                 <div className='edad-sexo'>
                     <div className='edad'>
                         <p className='edad'>Seleccione la edad</p>
@@ -76,9 +106,16 @@ const Form = () => {
                     </div>
                 </div>
                 <p>Teléfono</p>
-                <input type='number' value={telefono} onChange={(e) => setTelefono(e.target.value)} />
+                <input type='text' value={telefono} onChange={(e) => setTelefono(e.target.value)} />
                 <p>Seleccione el Cargo</p>
-                <select value={cargo} onChange={(e) => setCargo(e.target.value)}></select>
+                <select value={cargo} onChange={(e) => setCargo(e.target.value)}>
+                    <option value=''>Seleccione</option>
+                    {cargos.map((cargo) => (
+                        <option key={cargo} value={cargo}>
+                            {cargo}
+                        </option>
+                    ))}
+                </select>
                 <p>Cambiar Foto del empleado</p>
                 <input type='file' value={foto} onChange={(e) => setFoto(e.target.value)} />
             </form>
