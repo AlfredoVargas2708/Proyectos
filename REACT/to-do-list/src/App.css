@@ -1,0 +1,29 @@
+body {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 0;
+}
+
+p {
+    text-shadow: 3px 5px 5px chartreuse;
+    margin: 0 0 0 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.titulo {
+    font-size: 2.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 3px 5px 5px chartreuse;
+}
+
+input {
+    width: 250px;
+    height: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 3px 5px 5px chartreuse;
+}
