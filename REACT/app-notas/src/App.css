@@ -8,3 +8,36 @@ header h1 {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-shadow: 5px 5px 10px red;
 }
+
+main button.nueva {
+  background: url('./assets/edit-button_84380.png') no-repeat center;
+  float: right;
+  height: 40px;
+  width: 40px;
+  border: none;
+}
+
+main button:hover {
+  background-color: green;
+}
+
+textarea {
+  display: flex;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+section {
+  margin: 0 auto;
+  justify-content: center;
+  display: grid;
+}
+
+section button {
+  width: 50%;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid red;
+  border-radius: 15px;
+  font-size: 1.5rem;
+}
