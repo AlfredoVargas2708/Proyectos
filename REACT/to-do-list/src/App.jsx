@@ -6,8 +6,11 @@ function App() {
   const [tareas, setTareas] = useState([]);
 
   function handleClick() {
-    setTareas([...tareas, tarea]);
-    setTarea("");
+    if (tarea.trim() !== "") {
+      // Prevent adding empty tasks
+      setTareas([...tareas, tarea]);
+      setTarea("");
+    }
   }
 
   function handleEliminar(index) {
@@ -17,7 +20,7 @@ function App() {
   return (
     <>
       <div className="titulo">
-        <h1> Lista de Tareas: </h1>
+        <h1>Lista de Tareas:</h1>
       </div>
       <header>
         <p>
@@ -27,7 +30,7 @@ function App() {
             value={tarea}
             onChange={(e) => setTarea(e.target.value)}
           />{" "}
-          <button onClick={handleClick}> AGREGAR </button>
+          <button onClick={handleClick}>AGREGAR</button>
         </p>
       </header>
       <section>
@@ -36,7 +39,7 @@ function App() {
             tareas.map((tarea, index) => (
               <div key={index}>
                 <ul>
-                  <li style={{ listStyleType: "square" }}>{tarea}</li>{" "}
+                  <li>{tarea}</li>{" "}
                   <button onClick={() => handleEliminar(index)}>
                     ELIMINAR TAREA
                   </button>
