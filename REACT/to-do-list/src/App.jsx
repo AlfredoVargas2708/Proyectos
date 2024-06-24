@@ -6,6 +6,7 @@ import Header from "./Components/Header";
 function App() {
   const [tarea, setTarea] = useState("");
   const [tareas, setTareas] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <div className="titulo">
@@ -17,7 +18,12 @@ function App() {
         tareas={tareas}
         setTareas={setTareas}
       />
-      <Lista tareas={tareas} setTareas={setTareas} />
+      <Lista
+        tareas={tareas}
+        setTareas={setTareas}
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+      />
     </>
   );
 }

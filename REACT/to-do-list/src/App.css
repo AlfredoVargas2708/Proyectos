@@ -43,12 +43,28 @@ button {
   font-size: 1.8rem;
 }
 
-.lista button {
+.lista button.eliminar {
   border-radius: 10px;
   background-color: red;
   color: white;
   padding: 5px 10px;
-  margin-top: 5px;
+  margin: 10px 10px 0 5px;
+}
+
+.lista button.editar {
+  border-radius: 10px;
+  background-color: blue;
+  color: white;
+  padding: 5px 10px;
+  margin: 10px 10px 0 5px;
+}
+
+.lista button.completar {
+  border-radius: 10px;
+  background-color: green;
+  color: white;
+  padding: 5px 10px;
+  margin: 10px 10px 0 5px;
 }
 
 ul {
@@ -63,7 +79,25 @@ section {
   padding: 10px;
   width: 80%;
   text-align: center;
-  margin: 0 auto;
+  margin: 10px auto 10px auto;
   border-radius: 20px;
   box-shadow: 3px 3px 10px blue;
+}
+
+p {
+  font-size: 1.6rem;
+  text-shadow: 1px 5px 4px blue;
+}
+
+section input {
+  width: 40%;
+  margin: 0 20px 0 0;
+}
+
+section button {
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  margin: 10px 0 0 0;
 }

@@ -2,6 +2,7 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "react-modal": "^3.16.1",
+    "reactjs-popup": "^2.0.6",
     "request": "^2.88.2"
   }
 }
