@@ -1,18 +1,25 @@
 import Editar from "./Editar";
 import "../App.css";
 import PropTypes from "prop-types";
+import { useState } from "react";
 
 function Lista({ tareas, setTareas, isOpen, setIsOpen }) {
+  const [completado, setCompletado] = useState(false);
   function handleEliminar(index) {
     setTareas([...tareas.filter((_, idx) => idx !== index)]);
+    setCompletado(!completado);
   }
   function handleEditar() {
     setIsOpen(!isOpen);
   }
 
+  function handleCompletar() {
+    setCompletado(!completado);
+  }
+
   return (
     <main>
-      <section>
+      <section className={completado ? "completada" : ""}>
         <div className="lista">
           {tareas.length > 0 ? (
             tareas.map((tarea, index) => (
@@ -29,7 +36,12 @@ function Lista({ tareas, setTareas, isOpen, setIsOpen }) {
                     <button className="editar" onClick={() => handleEditar()}>
                       EDITAR TAREA
                     </button>
-                    <button className="completar">COMPLETAR TAREA</button>
+                    <button
+                      className="completar"
+                      onClick={() => handleCompletar()}
+                    >
+                      {completado ? "TAREA COMPLETADA" : "COMPLETAR TAREA"}
+                    </button>
                   </ul>
                 </div>
                 <Editar

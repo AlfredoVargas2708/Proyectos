@@ -101,3 +101,8 @@ section button {
   font-size: 1.6rem;
   margin: 10px 0 0 0;
 }
+
+.completada {
+  background-color: green;
+  color: white;
+}
