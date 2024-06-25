@@ -41,3 +41,9 @@ section button {
   border-radius: 15px;
   font-size: 1.5rem;
 }
+
+input {
+  float: right;
+  height: 30px;
+  width: 30px;
+}
